@@ -1,0 +1,183 @@
+<%- include("header"); -%> 
+<!-- Managers Table -->
+<section class="mt-5">
+    <div class="container-fluid">
+        <div class="d-flex">
+        <h3 class="me-auto">Managers Table</h3>
+        <h3 class="fs-5">Add Manager<button type="button" class="ms-2 btn btn-dark" data-bs-toggle="modal" data-bs-target="#ManagerModal" data-bs-whatever="@mdo"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        <!-- Add Manager modal -->
+        <div class="modal fade" id="ManagerModal" tabindex="-1" aria-labelledby="ManagerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="ManagerModalLabel">Add Manager</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">id:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Name:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Experience:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Branch:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Age:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--  -->
+        </div>
+    </h3>
+        <table class="table table-dark table-striped table-hover   ">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Experience</th>
+                <th scope="col">Branch</th>
+                <th scope="col">Age</th>
+                <th scope="col">Edit<i class="fas fa-edit"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>25</td>
+                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>25</td>
+                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td>10  </td>
+                <td>@twitter</td>
+                <td>25</td>
+                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</section>
+<!-- Users -->
+<section class="mt-5">
+    <div class="container-fluid">
+        <div class="d-flex">
+        <h3 class="me-auto">Users Table</h3>
+            <h3 class="fs-5">Add Users<button type="button" class="ms-2 btn btn-dark" data-bs-toggle="modal" data-bs-target="#UserModal" data-bs-whatever="@mdo"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <!-- Add Manager modal -->
+            <div class="modal fade" id="UserModal" tabindex="-1" aria-labelledby="UserModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="UserModalLabel">Add User</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">cid:</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Name:</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">E-card:</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select type of e-card</option>
+                                <option value="1">Oneyear</option>
+                                <option value="2">Twoyear</option>
+                                <option value="3">Lifelong</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Branch:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Total Saving:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--  -->
+        </div>
+        </button></h3>
+        <table class="table table-dark table-striped table-hover   ">
+            <thead>
+              <tr>
+                <th scope="col">cid</th>
+                <th scope="col">Name</th>
+                <th scope="col">E-card</th>
+                <th scope="col">Branch</th>
+                <th scope="col">Total Savings</th>
+                <th scope="col">Edit<i class="fas fa-edit"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>50$</td>
+                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>50$</td>
+                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td>10  </td>
+                <td>@twitter</td>
+                <td>50$</td>
+                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</section>
+<%- include("footer"); -%>

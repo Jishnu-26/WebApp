@@ -1,40 +1,28 @@
-
 const express = require('express')
+const bodyParser = require('body-parser')
+const {users} = require('./data')
+const {authUser} = require('./basicauth')
+const bcrypt = require('bcrypt')
 const app = express()
-const mongoose = require('mongoose')
-app.set('view engine','ejs');
-const port = process.env.PORT ||  3000
-mongoose.connect(process.env.DATABASE_URL)
-const db = mongoose.connection
-db.on('error', (error) => console.error(error))
-db.once('open', () => console.log('connected to db'))
+app.set('view engine','ejs')
+const port = 3000
 
-app.use(express.static("public"));
-
-app.get("/",function(req, res){
-    res.render("index");
+app.get('/login', (req, res) => res.render("login"))
+app.get('/register', (req,res)=>{
+  res.render("register")
+})
+app.get('/chairmanhome', (req, res) => res.render("chairmanhome"))
+app.get('/userhome', authUser,(req, res) => res.render("userhome"))
+app.post('/register', (req, res) => {
+  bcrypt.hash(myPlaintextPassword, salt, function(err, hash) {
+    // Store hash in your password DB.
 });
-
-app.get("/login",function(req, res){
-  res.render("login");
-});
-
-app.get("/register",function(req, res){
-  res.render("register");
-});
-
-app.get("/tables",function(req, res){
-  res.render("tables");
-});
-
-app.get("/charts",function(req, res){
-  res.render("charts");
-});
-
-app.get("/forms",function(req, res){
-  res.render("forms");
-});
-
-app.listen(port, function(){
-    console.log("Server is running");
-  });
+})
+function setUser(req,res,next){
+  const userId = req.body.userId
+  if(userId){
+    req.user= users.find(user=>user.id === userId)
+  }
+  next( )
+}
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
