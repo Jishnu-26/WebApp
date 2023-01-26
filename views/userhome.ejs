@@ -1,2 +1,62 @@
 <%- include("header"); -%> 
+<div class="card mb-3 mt-5 mx-auto" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://api.lorem.space/image/face?w=500&h=500" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">user name</h5>
+          <p class="card-text">emailaddr</p>
+          <p class="mt-5 card-text"><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#UserModal" >Edit<i class="fas fa-edit"></i></button></p>
+          <!-- Add User modal -->
+          <div class="modal fade" id="UserModal" tabindex="-1" aria-labelledby="UserModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="UserModalLabel">Edit User</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form method="post">
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label" >cid:</label>
+                      <input type="text" class="form-control" id="recipient-name" name="cid">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label" >Name:</label>
+                      <input type="text" class="form-control" id="recipient-name" name="cname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">E-card:</label>
+                        <select class="form-select" aria-label="Default select example" name="ecard">
+                            <option selected>Select type of e-card</option>
+                            <option value="1">Oneyear</option>
+                            <option value="2">Twoyear</option>
+                            <option value="3">Lifelong</option>
+                          </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label" >Branch:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="cbranch">
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label" >Total Saving:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="csave">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                  </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        <!--  -->
+        </div>
+      </div>
+    </div>
+  </div>
 <%- include("footer") -%> 
