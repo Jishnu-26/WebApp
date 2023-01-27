@@ -13,7 +13,7 @@ const { userInfo } = require('os');
 Object.keys(users).forEach(key => console.log(users[key]));
 const app = express()
 app.set('view engine','ejs')
-const port = 3000
+const port = process.env.PORT || 3000
 app.use(bodyParser.urlencoded({extended: true}))
 let useremail = ""
 flag = false
