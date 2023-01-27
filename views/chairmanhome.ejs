@@ -1,4 +1,6 @@
 <%- include("header"); -%> 
+
+
 <!-- Managers Table -->
 <section class="mt-5">
     <div class="container-fluid">
@@ -60,29 +62,16 @@
               </tr>
             </thead>
             <tbody>
+              <% managers.forEach(managers  => { %>
               <tr>
-                <th scope="row">1</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>25</td>
+                <th scope="row"><%= managers.id %></th>
+                <td><%= managers.name %></td>
+                <td><%= managers.exp %></td>
+                <td><%= managers.branch %></td>
+                <td><%= managers.age %></td>
                 <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>25</td>
-                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>10  </td>
-                <td>@twitter</td>
-                <td>25</td>
-                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
-              </tr>
+                <% }); %>
             </tbody>
           </table>
     </div>
@@ -153,30 +142,17 @@
               </tr>
             </thead>
             <tbody>
+              <% userinfo.forEach(userinfo  => { %>
+                <tr>
+                  <th scope="row"><%= userinfo.id %></th>
+                  <td><%= userinfo.name %></td>
+                  <td><%= userinfo.ecard %></td>
+                  <td><%= userinfo.branch %></td>
+                  <td><%= userinfo.totalsave %></td>
+                  <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
+                <tr>
+                  <% }); %>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>50$</td>
-                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>50$</td>
-                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>10  </td>
-                <td>@twitter</td>
-                <td>50$</td>
-                <td><button class="btn btn-light"><i class="fas fa-edit"></i></button></td>
-              </tr>
             </tbody>
           </table>
     </div>
